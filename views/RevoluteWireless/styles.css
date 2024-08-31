@@ -1,0 +1,220 @@
+.fullwidthcontainer{
+    padding-top: 5em;
+    height: 70dvh;
+}
+
+
+body {
+  margin: 0;
+}
+
+
+.textcontent{
+  color: #ffffff;
+  width: 100dvw; 
+  display: flex; 
+  flex-direction:column; 
+  align-items: center;  
+  padding-bottom: 3em;
+  background-color: #000000;
+}
+
+.title {
+line-height: 1;
+color: #ded2b4;
+font-family: serif;
+font-size: 300%;
+font-weight: 500;
+font-stretch: 50%;
+text-align: center;
+}
+
+.video-bg {
+/* Span the full grid */
+/* grid-area: var(--fullGrid); */
+
+/* Re-size video to cover full screen while maintaining aspect ratio */
+width: 100%;
+/* min-height: 100%; */
+object-fit: cover;
+
+/* Display video below overlay */
+z-index: 1;
+pointer-events: none;
+
+}
+
+
+
+.background {
+
+/*   */
+background: #000000;
+min-height: 100dvh;
+width:100dvw;
+display: flex;
+flex-direction: column;
+place-items: center;
+justify-items:top;
+/*   */
+} 
+
+.topnav {
+
+overflow: hidden;
+min-height: 6em;
+width:100dvw;
+display: flex;
+align-items: left;
+position: fixed;
+top: 0;
+z-index: 100;
+/* border: 2px solid rgba(0, 0, 0, .15); */
+background-image: linear-gradient(#0e0f15,#08080a 40%, #5f583700);
+/* background-color: rgba(255, 255, 255, 0.2); */
+/* backdrop-filter: blur(5px); */
+
+/* backdrop-filter:  saturate(180%) blur(20px); */
+/* background-color: rgba(255,255,255,.025); */
+/* background:  rgba(255,255,255,.8); */
+
+}
+
+
+#image-container {
+/*             width: 100dvw; */
+        /* height: 200px; */
+        overflow: hidden;
+        position: relative;
+   
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: left .5s;
+    }
+
+    #prevBtn {
+      
+      position: absolute;
+      bottom:.5%;
+       transform: translate(-0%, -50%);
+      z-index:50;
+      left: 2%;
+      /* background-color: #97b2cf; */
+      padding: 20px;
+      background-image: url("images/leftarrow.svg");
+      /* filter: drop-shadow(0px 0px 30px rgb(255, 255, 255)); i dont like
+       this cuz its getting in the way of the description thingy im adding*/
+
+      
+       
+
+    }
+
+  #nextBtn {
+      
+      position: absolute;
+      bottom:.5%;
+      right:2%;
+       transform: translate(-0%, -50%);
+      z-index: 50;
+      padding: 20px;
+      background-image: url("images/rightarrow.svg");
+      /* filter: drop-shadow(0px 0px 30px rgb(255, 255, 255)); i dont like
+       this cuz its getting in the way of the description thingy im adding*/
+       
+    }
+
+    #controls {
+      
+   margin: 0;
+   z-index: 50;
+    }
+
+    .caption{
+
+/*font-family: sans-serif;*/
+  font-size: 2.5em;
+text-align: center;
+line-height: 1;
+color: #ffffff;
+/* font-family: serif; */
+/* font-size: 300%; */
+font-weight: 500;
+font-stretch: 50%;
+text-align: left;
+margin-bottom: 0.5em;
+padding: 0%;
+margin-left: 0%;
+
+}
+
+.showcase {
+flex: 1;
+max-width: 100%; /* Adjust this to control the width of the image */
+box-sizing: border-box;
+flex-grow: 2;
+background-image:url("images/Revolute/showcase1 Large.png");
+background-size: cover;
+
+aspect-ratio: 1280/906 auto;
+
+}
+
+
+
+
+.showcasecontainer {
+width: 80dvw;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+  
+}
+
+.magticontainer {
+width: 80dvw;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+  
+}
+
+.showcasetext {
+flex: 1;
+max-width: 100%; /* Adjust this to control the width of the text */
+box-sizing: border-box;
+font-family: sans-serif;
+color: #989696;
+}
+
+.showcasetext title1{
+
+font-family: sans-serif;
+  font-size: 2.5em;
+text-align: center;
+line-height: 1;
+color: #b7b7b7;
+font-weight: 500;
+
+}
+
+
+/* magtics below */
+
+@media (max-width: 768px) {
+.showcasecontainer {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+}
+.magticontainer {
+    flex-direction: column-reverse; /* Stack elements vertically on smaller screens */
+}
+.showcasetext, .showcase {
+    width: 100dvw; /* Full width on smaller screens */
+}
+}
